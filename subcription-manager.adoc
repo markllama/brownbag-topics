@@ -1,7 +1,5 @@
 :source-highlighter: pygments
 :toc:
-:toc-title: `Table of Contents`
-:toc-placement!:
 
 == Subscription Manager Concepts
 
