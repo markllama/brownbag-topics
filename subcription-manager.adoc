@@ -79,6 +79,17 @@ The registered system name is: markllama-rhel7
 *subscription-manager register --org <org name> --activationkey <key string>*
 ----
 
+=== Unregister
+
+If a host will no longer be getting updates it can be removed from the
+Red Hat registration for this user.  It is nice, but not necessary to
+unattach the subscription first.
+
+.Unregister Host
+[literal,subs="verbatim,quotes"]
+----
+*subscription-manager unregister*
+----
 == Subscription Management
 
 === List available subscriptions (with pool ids)
@@ -122,7 +133,19 @@ Repo Name: Red Hat Enterprise Linux 7 Server (RPMs)
 
 === Enable/Disable repositories
 
+The _repos_ subcommand is used to show, enable and disable RPM
+repositories on the host. It merely modifies the
+`/etc/yum.repos.d/redhat.repo` file, flipping the `enabled = ` flag
+for each repo. 
+
 ==== Disable all repositories
+
+With some subscriptions a large number of unwanted repositories can be
+enabled by default.  It is generally a good idea to check the enabled
+repositories just after attachement and compare to the desired
+list. If you know exactly which repositories should be enabled, it is
+often easier just to disable all and then re-enable the ones that are
+needed.
 
 .Disable all repositories
 [literal,subs="verbatim,quotes"]
@@ -133,7 +156,6 @@ Repository 'rhel-7-server-satellite-tools-6.2-rpms' is disabled for this system.
 Repository 'rhel-7-server-v2vwin-1-debug-rpms' is disabled for this system.
 ...
 ----
-
 ==== Enable a set of repositories
 
 .Enable a set of repositories
