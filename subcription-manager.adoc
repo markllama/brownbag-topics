@@ -67,7 +67,9 @@ The registered system name is: markllama-rhel7
 *subscription-manager register --org <org name> --activationkey <key string>*
 ----
 
-== List available subscriptions (with pool ids)
+== Subscription Management
+
+=== List available subscriptions (with pool ids)
 
 .List Subscriptions and Pool IDs
 [literal,subs="verbatim,quotes"]
@@ -79,7 +81,7 @@ Subscription Name:   Red Hat Developer Subscription
 Pool ID:             8a85f9996ae5df64016b1fd8ff1f791c
 ----
 
-== Attach to a subscription
+=== Attach to a subscription
 
 
 .Attach to a subscription
@@ -89,7 +91,9 @@ Pool ID:             8a85f9996ae5df64016b1fd8ff1f791c
 Successfully attached a subscription for: Red Hat Developer Subscription
 ----
 
-== Listing repositories
+== Repo Management
+
+=== Listing repositories
 
 
 .List enabled repositories
@@ -104,9 +108,9 @@ Repo Name: Red Hat Enterprise Linux 7 Server (RPMs)
  * `--list-enabled`
  * `--list-disabled`
 
-== Enable/Disable repositories
+=== Enable/Disable repositories
 
-=== Disable all repositories
+==== Disable all repositories
 
 .Disable all repositories
 [literal,subs="verbatim,quotes"]
@@ -118,7 +122,7 @@ Repository 'rhel-7-server-v2vwin-1-debug-rpms' is disabled for this system.
 ...
 ----
 
-=== Enable a set of repositories
+==== Enable a set of repositories
 
 .Enable a set of repositories
 [literal,subs="verbatim,quotes"]
