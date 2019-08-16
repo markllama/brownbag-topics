@@ -70,7 +70,7 @@ The registered system name is: markllama-rhel7
 
 === Register with Satellite (org/activationkey)
 
-.Register Host with username/password
+.Register Host with org and activation key
 [literal,subs="verbatim,quotes"]
 ----
 *subscription-manager register --org <org name> --activationkey <key string>*
