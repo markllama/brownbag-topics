@@ -27,6 +27,8 @@ repositories.
 
 toc::[]
 
+'''
+
 === Register
 
 Registration associates the host to an account on the Red Hat Network.
