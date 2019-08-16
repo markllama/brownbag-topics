@@ -13,7 +13,7 @@ sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf
 
 .Register Host
 ----
-*subscription-manager register --username <username> --password <password>*
+**subscription-manager register --username <username> --password <password>**
 Registering to: subscription.rhsm.redhat.com:443/subscription
 The system has been registered with ID: e3c6b7ba-83fa-4af8-8ef9-10aa6af2dd2e
 The registered system name is: markllama-rhel7
