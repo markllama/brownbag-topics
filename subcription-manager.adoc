@@ -2,10 +2,6 @@
 :toc:
 :toc-placement!:
 
-Here is my preamble paragraph, but I could really place the TOC anywhere! Lorem ipsum foo bar baz.
-
-toc::[]
-
 == Subscription Manager Concepts
 
 `subscription-manager` is the tool Red Hat uses to control access to
@@ -18,6 +14,8 @@ the sysadmin.
 
 Each step serves to build a connection between the host and the RPM
 repositories.
+
+toc::[]
 
 === Register
 
