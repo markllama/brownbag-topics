@@ -1,15 +1,5 @@
 :source-highlighter: pygments
 
-== Preparation of RHEL image - disable and remove RHN if needed
-
-
-.Disable RHN Registration
-[literal,subs="verbatim,quotes"]
-----
-**mv /etc/sysconfig/rhn/systemid /etc/sysconfig/rhn/disable.systemid
-sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf**
-----
-
 == Subscription Manager Concepts
 
 `subscription-manager` is the tool Red Hat uses to control access to
@@ -19,6 +9,19 @@ the sysadmin.
 * register the host with Red Hat
 * attach a subscription (software entitlement)
 * enable YUM repositories provided by the subscription.
+
+
+== Preparation of RHEL image - disable and remove RHN if needed
+
+If the host you're working on is subscribed by traditional RHN (as is
+the commercial cloud VM I'm using to demo this), disable that before beginning.
+
+.Disable RHN Registration
+[literal,subs="verbatim,quotes"]
+----
+**mv /etc/sysconfig/rhn/systemid /etc/sysconfig/rhn/disable.systemid
+sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf**
+----
 
 
 
