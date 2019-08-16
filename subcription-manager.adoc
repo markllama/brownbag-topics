@@ -1,6 +1,6 @@
 :source-highlighter: pygments
 
-* Preparation of RHEL image - disable and remove RHN if needed
+== Preparation of RHEL image - disable and remove RHN if needed
 
 
 .Disable RHN Registration
@@ -10,7 +10,19 @@
 sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf**
 ----
 
-* Register host with Red Hat subscription service
+== Subscription Manager Concepts
+
+`subscription-manager` is the tool Red Hat uses to control access to
+premium software packages and updates. It serves three functions for
+the sysadmin.
+
+* register the host with Red Hat
+* attach a subscription (software entitlement)
+* enable YUM repositories provided by the subscription.
+
+
+
+== Register host with Red Hat subscription service
 
 
 .Register Host
@@ -22,6 +34,7 @@ The system has been registered with ID: e3c6b7ba-83fa-4af8-8ef9-10aa6af2dd2e
 The registered system name is: markllama-rhel7
 ----
 
+* Check status of registration and attachement
 
 
 .Check Status (before attach)
