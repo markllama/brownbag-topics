@@ -135,7 +135,7 @@ Repo Name: Red Hat Enterprise Linux 7 Server (RPMs)
 
 The _repos_ subcommand is used to show, enable and disable RPM
 repositories on the host. It merely modifies the
-`/etc/yum.repos.d/redhat.repo` file, flipping the `enabled = ` flag
+`/etc/yum.repos.d/redhat.repo` file, flipping the `enabled\ =` flag
 for each repo. 
 
 ==== Disable all repositories
