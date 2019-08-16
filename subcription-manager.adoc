@@ -1,5 +1,7 @@
 :source-highlighter: pygments
 
+{{ page.document | tocify_asciidoc }}
+
 == Subscription Manager Concepts
 
 `subscription-manager` is the tool Red Hat uses to control access to
