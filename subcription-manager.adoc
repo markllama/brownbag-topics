@@ -24,4 +24,15 @@ The registered system name is: markllama-rhel7
 
 
 
+.Check Status
+[literal,subs="verbatim,quotes"]
+----
+*subscription-manager status*
++-------------------------------------------+
+   System Status Details
++-------------------------------------------+
+Overall Status: Invalid
 
+Red Hat Enterprise Linux Server:
+- Not supported by a valid subscription.
+----
