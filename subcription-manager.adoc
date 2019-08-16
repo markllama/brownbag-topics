@@ -4,16 +4,17 @@
 
 
 .Disable RHN Registration
+[literal,subs="verbatim,quotes"]
 ----
-mv /etc/sysconfig/rhn/systemid /etc/sysconfig/rhn/disable.systemid
-sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf
+**mv /etc/sysconfig/rhn/systemid /etc/sysconfig/rhn/disable.systemid
+sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf**
 ----
 
 * Register host with Red Hat subscription service
 
 
 .Register Host
-[literal,subs="verbatim,quotes"] 
+[literal,subs="verbatim,quotes"]
 ----
 **subscription-manager register --username <username> --password <password>**
 Registering to: subscription.rhsm.redhat.com:443/subscription
