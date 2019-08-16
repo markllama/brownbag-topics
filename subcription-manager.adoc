@@ -66,21 +66,6 @@ The registered system name is: markllama-rhel7
 ----
 *subscription-manager register --org <org name> --activationkey <key string>*
 ----
-
-== Check status of registration and attachment
-
-
-.Check Status (before attach)
-[literal,subs="verbatim,quotes"]
-----
-*subscription-manager status*
-+-------------------------------------------+
-   System Status Details
-+-------------------------------------------+
-Overall Status: Invalid
-
-Red Hat Enterprise Linux Server:
-- Not supported by a valid subscription.
 ----
 == List available subscriptions (with pool ids)
 
@@ -160,7 +145,7 @@ interchangably with `subscription-manager`
 * yum-config-manager
 
 
-== Disable and remove RHN if needed
+== Appendix: Disable and remove RHN if needed
 
 If the host you're working on is subscribed by traditional RHN (as is
 the commercial cloud VM I'm using to demo this), disable that before beginning.
