@@ -119,7 +119,7 @@ Successfully attached a subscription for: Red Hat Developer Subscription
 .List enabled repositories
 [literal,subs="verbatim,quotes"]
 ----
-*subscription-manager repos --list-enabled | grep -A1 \'Repo ID\'*
+*subscription-manager repos --list-enabled | grep -A1 'Repo ID'*
 Repo ID:   rhel-7-server-rpms
 Repo Name: Red Hat Enterprise Linux 7 Server (RPMs)
 ----
@@ -135,7 +135,7 @@ Repo Name: Red Hat Enterprise Linux 7 Server (RPMs)
 .Disable all repositories
 [literal,subs="verbatim,quotes"]
 ----
-*subscription-manager repos --disable=\'*\'*
+*subscription-manager repos --disable='*'*
 Repository 'rhel-7-server-dotnet-debug-rpms' is disabled for this system.
 Repository 'rhel-7-server-satellite-tools-6.2-rpms' is disabled for this system.
 Repository 'rhel-7-server-v2vwin-1-debug-rpms' is disabled for this system.
