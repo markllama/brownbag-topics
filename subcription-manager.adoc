@@ -1,6 +1,6 @@
 :source-highlighter: pygments
 :toc:
-:toc-title: Hello
+:toc-title: [big]"Rable of Contents#
 :toc-placement!:
 
 == Subscription Manager Concepts
