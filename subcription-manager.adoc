@@ -147,5 +147,23 @@ Repository 'rhel-7-server-v2vwin-1-debug-rpms' is disabled for this system.
 .Enable a set of repositories
 [literal,subs="verbatim,quotes"]
 ----
-
+*subscription-manager repos \
+  --enable rhel-7-server-rpms \
+  --enable rhel-7-server-supplementary-rpms \
+  --enable rhel-7-server-optional-rpms \
+  --enable rhel-7-server-extras-rpms*
+Repository 'rhel-7-server-rpms' is enabled for this system.
+Repository 'rhel-7-server-optional-rpms' is enabled for this system.
+Repository 'rhel-7-server-supplementary-rpms' is enabled for this system.
+Repository 'rhel-7-server-extras-rpms' is enabled for this system.
 ----
+
+=== Yum tools for repo managment
+
+The `subscription-manager repos` command simply manipulates the
+`/etc/yum.repos.d/redhat.repo` file. If you are more comfortable with
+the yum commands for repository control you can use them
+interchangably with `subscription-manager`
+
+* yum repolist
+* yum-config-manager
