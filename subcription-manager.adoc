@@ -11,7 +11,9 @@ sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf
 
 * Register host with Red Hat subscription service
 
+
 .Register Host
+[literal,subs="verbatim,quotes"] 
 ----
 **subscription-manager register --username <username> --password <password>**
 Registering to: subscription.rhsm.redhat.com:443/subscription
