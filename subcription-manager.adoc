@@ -45,19 +45,6 @@ repositories are available from the attached subscriptions and their
 enablement status. In some ways this mirrors the behavior of
 `yum repolist` . 
 
-== Preparation of RHEL image - disable and remove RHN if needed
-
-If the host you're working on is subscribed by traditional RHN (as is
-the commercial cloud VM I'm using to demo this), disable that before beginning.
-
-.Disable RHN Registration
-[literal,subs="verbatim,quotes"]
-----
-*mv /etc/sysconfig/rhn/systemid /etc/sysconfig/rhn/disable.systemid
-sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf*
-----
-
-
 == Register host with Red Hat subscription service
 
 
@@ -171,3 +158,21 @@ interchangably with `subscription-manager`
 
 * yum repolist
 * yum-config-manager
+
+
+== Disable and remove RHN if needed
+
+If the host you're working on is subscribed by traditional RHN (as is
+the commercial cloud VM I'm using to demo this), disable that before beginning.
+
+.Disable RHN Registration
+[literal,subs="verbatim,quotes"]
+----
+*mv /etc/sysconfig/rhn/systemid /etc/sysconfig/rhn/disable.systemid
+sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf*
+----
+== References
+
+* https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html-single/rhsm/index[USING AND CONFIGURING RED HAT SUBSCRIPTION MANAGER]
+* https://access.redhat.com/solutions/253273[How to register and subscribe a system to the Red Hat Customer Portal using Red Hat Subscription-Manager]
+
