@@ -1,0 +1,24 @@
+:source-highlighter: pygments
+
+* Preparation of Rackspace RHEL image - disable and remove RHN
+
+
+.Disable RHN Registration
+----
+mv /etc/sysconfig/rhn/systemid /etc/sysconfig/rhn/disable.systemid
+sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf
+----
+
+* Register host with Red Hat subscription service
+
+.Register Host
+----
+subscription-manager register --username <username> --password <password>
+Registering to: subscription.rhsm.redhat.com:443/subscription
+The system has been registered with ID: e3c6b7ba-83fa-4af8-8ef9-10aa6af2dd2e
+The registered system name is: markllama-rhel7
+----
+
+
+
+
