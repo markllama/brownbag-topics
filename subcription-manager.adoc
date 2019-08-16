@@ -1,6 +1,6 @@
 :source-highlighter: pygments
 
-* Preparation of Rackspace RHEL image - disable and remove RHN
+* Preparation of RHEL image - disable and remove RHN if needed
 
 
 .Disable RHN Registration
@@ -24,7 +24,7 @@ The registered system name is: markllama-rhel7
 
 
 
-.Check Status
+.Check Status (before attach)
 [literal,subs="verbatim,quotes"]
 ----
 *subscription-manager status*
