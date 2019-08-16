@@ -66,7 +66,7 @@ The system has been registered with ID: e3c6b7ba-83fa-4af8-8ef9-10aa6af2dd2e
 The registered system name is: markllama-rhel7
 ----
 
-* Check status of registration and attachement
+== Check status of registration and attachment
 
 
 .Check Status (before attach)
@@ -80,4 +80,17 @@ Overall Status: Invalid
 
 Red Hat Enterprise Linux Server:
 - Not supported by a valid subscription.
+----
+== List available subscriptions (with pool ids)
+
+.List Subscriptions and Pool IDs
+[literal,subs="verbatim,quotes"]
+----
+*subscription-manager list --available | grep 'Name\|ID'*
+Subscription Name:   60 Day Self-Supported Red Hat OpenStack Platform Preview
+Pool ID:             8a85f99b6b498682016ba4f2722c4d98
+Subscription Name:   Red Hat Developer Subscription
+Pool ID:             8a85f9996ae5df64016b1fd8ff1f791c
+Subscription Name:   60 Day Self-Supported Red Hat OpenStack Platform Preview
+Pool ID:             8a85f99b6b498682016ba4f2726b4d9d
 ----
