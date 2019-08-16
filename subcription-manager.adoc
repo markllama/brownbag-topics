@@ -45,7 +45,7 @@ repositories are available from the attached subscriptions and their
 enablement status. In some ways this mirrors the behavior of
 `yum repolist` . 
 
-== Register host with Red Hat subscription service
+== Registration
 
 
 === Register with Customer Portal (username/password)
