@@ -10,6 +10,36 @@ the sysadmin.
 * attach a subscription (software entitlement)
 * enable YUM repositories provided by the subscription.
 
+Each step serves to build a connection between the host and the RPM
+repositories.
+
+=== Register
+
+Registration associates the host to an account on the Red Hat Network.
+When complete, Red Hat is aware of the host and that you own it, but
+it is not yet able to get software or updates.
+
+Once a host is registered you can query the subscriptions that are
+available. The next step is to attach the host to a subscription.
+
+=== Attach
+
+Attachment binds the registered host to a software subscription and
+consumes one or more entitlements. This step tells Red Hat that you
+mean to use a collection of software on this host and configures the
+host to be able to see the repositories that this collection contains.
+
+A unit of subscription is called a _pool_ and a pool is idenitified
+with a _pool-id_ that is a long hash string.
+
+
+=== Repos
+
+A subscription typically provides a number of software
+repositories. `subscription-manager` allows you to query what
+repositories are available from the attached subscriptions and their
+enablement status. In some ways this mirrors the behavior of
+`yum repolist` . 
 
 == Preparation of RHEL image - disable and remove RHN if needed
 
@@ -22,7 +52,6 @@ the commercial cloud VM I'm using to demo this), disable that before beginning.
 **mv /etc/sysconfig/rhn/systemid /etc/sysconfig/rhn/disable.systemid
 sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf**
 ----
-
 
 
 == Register host with Red Hat subscription service
