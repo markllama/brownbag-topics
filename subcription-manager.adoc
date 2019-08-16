@@ -119,7 +119,7 @@ Successfully attached a subscription for: Red Hat Developer Subscription
 .List enabled repositories
 [literal,subs="verbatim,quotes"]
 ----
-subscription-manager repos --list-enabled | grep -A1 \'Repo ID\'
+*subscription-manager repos --list-enabled | grep -A1 \'Repo ID\'*
 Repo ID:   rhel-7-server-rpms
 Repo Name: Red Hat Enterprise Linux 7 Server (RPMs)
 ----
