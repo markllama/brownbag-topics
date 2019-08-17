@@ -1,4 +1,18 @@
-= Simple Interfaces in RHEL
+= Simple Interfaces in RHEL based distribtions
+:author:Mark Lamourine <markllama@gmail.com>
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+'''
+
+WARNING: This is an incomplete draft document
+
+''''
 
 In Red Hat Enterprise Linux and Fedora and their derivative
 distributions, network interfaces are initialized from configuration

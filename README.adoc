@@ -8,7 +8,7 @@ Send suggestions to me by adding issues to this repository.
 
 * link:subscription-manager.adoc[Subscription Manager Concepts]
 * Network Interface Configuration (on Red Hat systems)
-** Simple Interface
+** link:rhel-network/simple-interface.adoc[Simple Interface]
 ** Bridge Interface
 ** Bonded Interface
 * Red Hat OpenStack (OSP) Concepts
