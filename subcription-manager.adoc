@@ -186,3 +186,5 @@ sed -i -e '/^enabled =/s/1/0/' /etc/yum/pluginconf.d/rhnplugin.conf*
 * https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html-single/rhsm/index[USING AND CONFIGURING RED HAT SUBSCRIPTION MANAGER]
 * https://access.redhat.com/solutions/253273[How to register and subscribe a system to the Red Hat Customer Portal using Red Hat Subscription-Manager]
 
+'''
+{author} - {revision}
