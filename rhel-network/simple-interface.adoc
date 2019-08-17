@@ -1,0 +1,12 @@
+= Simple Interfaces in RHEL
+
+In Red Hat Enterprise Linux and Fedora and their derivative
+distributions, network interfaces are initialized from configuration
+files in `/etc/sysconfig/network-scripts`
+
+They can also be managed dynamically by _Network-Manager_.  This
+document focuses only on the configuration files and the simplest CLI
+network management commands, `ifup`, `ifdown` and `ip`.
+Network-Manager will be the topic for another day.
+
+== 

@@ -10,7 +10,7 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-== Subscription Manager Concepts
+= Subscription Manager Concepts
 
 `subscription-manager` is the tool Red Hat uses to control access to
 premium software packages and updates. It serves three functions for
