@@ -121,25 +121,45 @@ NM_CONTROLLED=[yes|no]::
 
 === Basic Configuration
 
-* ONBOOT
-* BOOTPROTO
+ONBOOT=[yes|no]::
+  Start this interface on boot? Probably yes.
+
+BOOTPROTO=[none|dhcp|bootp]::
+  Almost certainly none. +
+  You may sometimes see _static_. This is the same as _none_. 
 
 === IPv4 Configuration
 
-* IPADDR
-* PREFIX
-* GATEWAY
-* PEERDNS
-* DNS[n]
+IPADDR=<ipv4_address>::
+  A dotted quad IPv4 address string
+
+PREFIX=n::
+  A CIDR mask number.  0-32 +
+  You may occasionally see `NETMASK` with a dotted quad. This is deprecated.
+
+GATEWAY=<ipv4_address>::
+  A dotted quad IPv4 address in the broadcast domain defined by
+  `IPADDR` and `PREFIX`
+  
+PEERDNS=[yes|no]::
+  Allow NetworkManager to update `/etc/resolv.conf`. +
+  Should generally be _no_
+
+DNS[n]=<ipv4_address>::
+  An IPv4 address of a nameserver.
+  To set more than one nameserver, use n=1,2,3  
 
 === IPv6 Configuration
 
-* IPV6INIT=no
-* IPV6_AUTOCONF=yes
-* IPV6_DEFROUTE=yes
-* IPV6_FAILURE_FATAL=no
-* IPV6_ADDR_GEN_MODE=stable-privacy
+IPv6 configuration is out of scope, but you will often see these in an
+Ethernet configuration file. Unless the systems are explictly using
+IPv6, `IPV6INIT` should be 'no' and the rest are then NO-OPs. 
 
+* IPV6INIT=[yes|no]
+* IPV6_AUTOCONF=[yes|no]
+* IPV6_DEFROUTE=[yes|no]
+* IPV6_FAILURE_FATAL=[yes|no]
+* IPV6_ADDR_GEN_MODE=stable-privacy
 
 == References
 
