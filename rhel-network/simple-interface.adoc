@@ -23,4 +23,111 @@ document focuses only on the configuration files and the simplest CLI
 network management commands, `ifup`, `ifdown` and `ip`.
 Network-Manager will be the topic for another day.
 
-== 
+== `ifup`, `ifdown` and `ip`
+
+The most common operation on a network interface is to initialize it
+or shut it down.  Red Hat systems have two special commands for
+this.
+
+* `ifup <interface>`- bring up the interface
+* `ifdown <interface>` - shut down the interface
+
+The interface names are strings matching the interface listed by `ip link`.
+They also correspond to files at
+`/etc/sysconfig/network-scripts/ifcfg-<interface>`.
+
+
+
+
+The `ip` command is common to RHEL and Ubuntu distributions.  It's
+also a big enough topic for it's own brownbag talk. I'll leave that
+for another time.
+
+
+=== `if{up,down}-*` scripts
+
+
+The `/etc/sysconfig/network-scripts` directory contains all of the
+scripts that are used to manage the interfaces.  There is an `ifup-*`
+and `ifdown-*` for each type of interface. You can scan these to see
+how the process works and what variables are available, but you will
+never invoke them directly.
+
+
+== `ifcfg-*` network definition files
+
+Each physical and virtual interface on a RHEL based system is
+configured with a file named `ifcfg-<interface>` where _<interface>_
+is the name of the interface as reported by `ip link`. The file is a
+shell script fragment with a set of environment variable
+assignments.
+
+For example, a simple ethernet interface configuration file might
+contain something like this
+
+.`ifcfg-eno1` sample
+----
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=no
+IPV4_FAILURE_FATAL=no
+IPV6INIT=no
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=eno1
+UUID=f6f93648-b714-409c-b87b-cd214e6f4b30
+DEVICE=eno1
+ONBOOT=yes
+IPADDR=172.16.2.2
+PREFIX=24
+----
+
+If you are at all familiar with linux networking these should be
+fairly self-explanatory. In most cases you will not need to change
+these values after the system is initialized.  There are also
+additional variables that are used to configure things like bridges
+and bonded interfaces. These will be the topic for another day.
+
+== `ifcfg-*` environment variables
+
+This is a sample of the commmon settings you will find in simple
+interface configurations. These can be for either physical or virtual
+interfaces.
+
+=== Interface Identification
+
+* TYPE
+* DEVICE
+* NAME
+* UUID
+
+=== Basic Configuration
+
+* ONBOOT
+* BOOTPROTO
+
+=== IPv4 Configuration
+
+* IPADDR
+* PREFIX
+* IPV4_FAILURE_FATAL=no
+* DEFROUTE
+* GATEWAY
+
+=== IPv6 Configuration
+
+* IPV6INIT=no
+* IPV6_AUTOCONF=yes
+* IPV6_DEFROUTE=yes
+* IPV6_FAILURE_FATAL=no
+* IPV6_ADDR_GEN_MODE=stable-privacy
+
+
+
+== References
+
+* https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/s1-networkscripts-interfaces[RHEL Interface Configuration Files]
