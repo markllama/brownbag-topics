@@ -98,12 +98,26 @@ This is a sample of the commmon settings you will find in simple
 interface configurations. These can be for either physical or virtual
 interfaces.
 
+The variabled shown here are just the most commonly set on Ethernet
+interfaces. A complete list with detailed descriptions can be found in
+documents listed in the References.
+
 === Interface Identification
 
-* TYPE
-* DEVICE
-* NAME
-* UUID
+These variables define the interface itself. They specify the which
+interface to configure.
+
+* TYPE=Ethernet
+  These values apply to Ethernet interfaces only
+
+* DEVICE=<name>
+  Name is a string identifying the physical interface
+
+* NAME=<name>
+  Assign a label to the interface. Almost always the same as DEVICE
+  
+* NM_CONTROLLED=[yes|no]
+  Does Network-Manager control this interface? Probably no on servers.
 
 === Basic Configuration
 
@@ -114,9 +128,9 @@ interfaces.
 
 * IPADDR
 * PREFIX
-* IPV4_FAILURE_FATAL=no
-* DEFROUTE
 * GATEWAY
+* PEERDNS
+* DNS[n]
 
 === IPv6 Configuration
 
@@ -125,7 +139,6 @@ interfaces.
 * IPV6_DEFROUTE=yes
 * IPV6_FAILURE_FATAL=no
 * IPV6_ADDR_GEN_MODE=stable-privacy
-
 
 
 == References
