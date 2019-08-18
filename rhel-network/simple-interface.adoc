@@ -107,16 +107,16 @@ documents listed in the References.
 These variables define the interface itself. They specify the which
 interface to configure.
 
-* TYPE=Ethernet
+TYPE=Ethernet::
   These values apply to Ethernet interfaces only
 
-* DEVICE=<name>
+DEVICE=<name>::
   Name is a string identifying the physical interface
 
-* NAME=<name>
+NAME=<name>::
   Assign a label to the interface. Almost always the same as DEVICE
   
-* NM_CONTROLLED=[yes|no]
+NM_CONTROLLED=[yes|no]::
   Does Network-Manager control this interface? Probably no on servers.
 
 === Basic Configuration
