@@ -5,6 +5,7 @@ These are meant to be short talks or reads to cover a single topic in
 not-very-much depth. A bite sized bit of knowledge to be chewed and savored.
 
 Send suggestions to me by adding issues to this repository.
+
 * Software Management
 **  link:rhel-softare/subscription-manager.adoc[Subscription Manager Concepts]
 ** YUM repo management - Client Side
