@@ -1,0 +1,12 @@
+= VLAN Interfaces in RHEL based distributions
+
+In the previous post link:simple-interface.adoc[Simple Interfaces in
+RHEL based distributions], we configured an IP address and network
+spec on a single physical interface on a host.  By default sends and
+receives packets with no VLAN tag, the _native vlan_.
+
+== References
+
+* https://en.wikipedia.org/wiki/IEEE_802.1Q[IEEE 8021Q - VLAN Tagging]
+* https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/sec-configure_802_1q_vlan_tagging_using_the_command_line[Configure  802.1Q VLAN Tagging]
+
